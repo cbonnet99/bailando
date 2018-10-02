@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+milonga:
+  name: Milonga
+
+pratique:
+  name: pratique
+
+milonga_concert:
+  name: Milonga-Concert

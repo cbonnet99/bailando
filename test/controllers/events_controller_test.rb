@@ -2,7 +2,7 @@ require 'test_helper'
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @event = events(:one)
+    @event = events(:milonga_tangueando)
   end
 
   test "should get index" do
@@ -17,7 +17,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create event" do
     assert_difference('Event.count') do
-      post events_url, params: { event: { description: @event.description, end_time: @event.end_time, price: @event.price, start_time: @event.start_time, title: @event.title } }
+      post events_url, params: { event: { city_id: @event.city.id, location: @event.location, dance_type_id: @event.dance_type.id, description: @event.description, end_time: @event.end_time, price: @event.price, start_time: @event.start_time, title: @event.title } }
     end
 
     assert_redirected_to event_url(Event.last)

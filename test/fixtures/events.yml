@@ -1,15 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  price: 
-  start_time: 2016-12-19 13:21:00
-  end_time: 2016-12-19 13:21:00
+milonga_tangueando:
+  title: Milonga hebdomadaire
+  description: Venez nombreux
+  price: 3 euros pour les non-adhérents
+  dance_type: milonga
+  location: Tangueando
+  city: toulouse
+  start_time: <%= 1.day.from_now %>
+  end_time: <%= 28.hours.from_now %>
 
-two:
-  title: MyString
-  description: MyText
-  price: 
-  start_time: 2016-12-19 13:21:00
-  end_time: 2016-12-19 13:21:00
+milonga_concert:
+  title: Concert de tango
+  description: Le groupe El Tanguero jouera en deuxième partie de soirée
+  price: 10 euros
+  dance_type: milonga_concert
+  location: La Maquina Tanguera
+  city: toulouse
+  start_time: <%= 3.days.from_now %>
+  end_time: <%= 76.hours.from_now %>
